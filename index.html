@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>hello world?</title>
+    <style>
+        p {
+            text-align: center;
+            font-size: 32px;
+            font-family: Arial, sans-serif;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 40%;
+        }
+
+        #botao1 {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #botao2 {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body >
+    <p>hello world?</p>
+   
+
+
+    <button id="botao1">Yes!</button>
+    <button id="botao2">No, sorry</button>
+    <script>
+        setInterval(function () {
+            var botao2 = document.getElementById("botao2");
+            var x = Math.random() * window.innerWidth;
+            var y = Math.random() * window.innerHeight;
+            botao2.style.left = x + "px";
+            botao2.style.top = y + "px";
+        }, 1000);
+    </script>
+    <script>
+        document.getElementById("botao1").addEventListener("click", function () {
+            alert("Great! Let's hang out!");
+        });
+    </script>
+</body>
+
+</html>
